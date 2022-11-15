@@ -11,10 +11,10 @@
     <nav class="gnb">
       <div class="gnb__logo">logo</div>
       <ul class="gnb__list">
-        <li>PROFILE</li>
-        <li>PROJECT</li>
-        <li>GRAPHICS</li>
-        <li>CONTACT</li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#project">PROJECT</a></li>
+        <li><a href="#graphics">GRAPHICS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
 
@@ -46,9 +46,12 @@
           </svg>
         </div>
         <div class="main__pallex">
-          <div class="pallex pallex__layer1"></div>
-          <div class="pallex pallex__layer2"></div>
-          <div class="pallex pallex__layer3"></div>
+          <div class="pallex pallex__layer1"><img src="img/bg_moon.svg" alt=""></div>
+          <div class="pallex pallex__layer2"><img src="img/bg_town.svg" alt=""></div>
+          <div class="pallex pallex__layer5"><img src="img/bg_town.svg" alt=""></div>
+          <div class="pallex pallex__layer3"><img src="img/bg_ground.svg" alt=""></div>
+          <div class="pallex pallex__layer4"><img src="img/bg_flower.svg" alt=""></div>
+
         </div>
         <div class="main__txt">
           <h1>Visual Communication</h1>
@@ -64,7 +67,7 @@
           <p>scroll</p>
         </div>
       </div>
-      <div class="profile">
+      <div class="profile" id="profile">
         <div class="profile__skills">
           <h4>UI/UX</h4>
           <ul class="skills skills__uiux">
@@ -90,10 +93,13 @@
           </ul>
         </div>
         <div class="profile__visual">
-          <div class="visual__box"></div>
+            <img src="img/profile_img.png" alt="">
+            <img src="img/deco_ring.svg" alt="" class="deco--ring">
+            <img src="img/deco_green.svg" alt="" class="deco--green">
+            <img src="img/deco_pink.svg" alt="" class="deco--pink">
         </div>
       </div>
-      <section class="market">
+      <section class="market" id="project">
         <div class="market__visual"></div>
         <div class="market__txt">
           <h2>멍냥마켓 <span class="gray">UI/UX</span></h2>
@@ -108,7 +114,7 @@
           </ul>
         </div>
       </section>
-      <section class="haksik">
+      <section class="haksik" id="graphics">
         <div class="haksik__txt">
           <h2>학식 앱 리디자인<span class="gray">UI/UX</span></h2>
           <p>
@@ -137,28 +143,33 @@
           </ul>
         </div>
       </section>
-      <div class="artworks">
+      <div class="artworks" id="artworks">
         <div class="artworks__top">
           <ul>
-            <li class="artworks__box artworks__top--luka"><a href="#popup1"></a></li>
-            <li class="artworks__box artworks__top--jeju"><a href="#popup2"></a></li>
-            <li class="artworks__box artworks__top--tiger"><a href="#popup3"></a></li>
-            <li class="artworks__box artworks__top--sun"><a href="#popup4"></a></li>
-            <li class="artworks__box artworks__top--summer"><a href="#popup5"></a></li>
+            <a href="#popup1"><li class="artworks__box artworks__top--luka"></li></a>
+            <a href="#popup2"><li class="artworks__box artworks__top--jeju"></li></a>
+            <a href="#popup3"><li class="artworks__box artworks__top--tiger"></li></a>
+            <a href="#popup4"><li class="artworks__box artworks__top--sun"></li></a>
+            <a href="#popup5"><li class="artworks__box artworks__top--summer"></li></a>
           </ul>
         </div>
         <div class="artworks__bottom">
           <ul>
-            <li class="artworks__box artworks__bottom--event"><a href="#popup6"></a></li>
-            <li class="artworks__box artworks__bottom--castellevent"><a href="#popup7"></a></li>
-            <li class="artworks__box artworks__bottom--castellins"><a href="#popup8"></a></li>
-            <li class="artworks__box artworks__bottom--andrew"><a href="#popup9"></a></li>
+            <a href="#popup6"><li class="artworks__box artworks__bottom--event"></li></a>
+            <a href="#popup7"><li class="artworks__box artworks__bottom--castellevent"></li></a>
+            <a href="#popup8"><li class="artworks__box artworks__bottom--castellins"></li></a>
+            <a href="#popup9"><li class="artworks__box artworks__bottom--andrew"></li></a>
           </ul>
         </div>
+        <div class="bg_line"><img src="img/line.svg" alt=""></div>
       </div>
+      <div class="deco_line"><img src="img/deco_line.svg" alt=""></div>
     </div>
-    <!-- <footer class="footer">
-      <ul class="footer__contact">
+   
+
+    <!-- footer -->
+    <footer class="footer" >
+      <ul class="footer__contact" id="contact">
         <h3>Contact</h3>
         <li>Email : and2288@naver.com</li>
         <li>KakaoTalk : thislife123</li>
@@ -177,17 +188,56 @@
           이미지 및 폰트는 별도의 출처가 있음을 밝힙니다.
         </li>
       </ul>
-    </footer> -->
+    </footer>
 
 
     <!-- pop -->
     
     <div class="pop popup1" id="popup1">
       <div class="pop__content">
-        <a href="#project5" class="pop__close">&times;</a>
+        <a href="#artworks" class="pop__close">&times;</a>
         <!-- <section class="pdf">
           <iframe src="img/motion-all.pdf" style="width:110rem; height:80rem;" frameborder="0"></iframe>\
         </section> -->
+    </div>
+    <div class="pop popup2" id="popup2">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup3" id="popup3">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup4" id="popup4">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup5" id="popup5">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup6" id="popup6">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup7" id="popup7">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup8" id="popup8">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup9" id="popup9">
+      <div class="pop__content">
+        <a href="#artworks" class="pop__close">&times;</a>
     </div>
 
 

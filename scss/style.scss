@@ -3,7 +3,7 @@
 @import "pages/popup";
 
 :root {
-  --circles: rgb(241, 255, 198);
+  --circles: rgb(255, 221, 177);
   // --background: #ffdaf1;
 }
 
@@ -42,6 +42,13 @@ body {
 
 .wrapper {
   width: 100vw;
+  position: relative;
+
+  .deco_line {
+    position: absolute;
+    bottom: 18%;
+    z-index: -1;
+  }
 
   .main {
     position: relative;
@@ -58,7 +65,8 @@ body {
       //   linear-gradient(127deg, $color--pink, rgba(227, 128, 255, 0.958) 70.71%),
       //   linear-gradient(336deg, $color--blue, rgb(255, 166, 236) 70.71%);
 
-      background: linear-gradient(217deg, #ffd3f3, #ffa1bd 76.71%),
+      background: linear-gradient(217deg, rgb(175, 247, 255), rgb(223, 255, 128) 70.71%),
+        linear-gradient(127deg, $color--pink, rgba(227, 128, 255, 0.958) 70.71%),
         linear-gradient(336deg, $color--blue, rgb(255, 166, 236) 70.71%);
 
       height: 98vh;
@@ -73,13 +81,16 @@ body {
     }
 
     &__pallex {
-      height: 100vh;
+      height: 98vh;
+
       overflow-x: hidden;
       overflow-y: auto;
+
       perspective: 1px;
-      position: relative;
-      display: flex;
-      z-index: 1;
+
+      margin-top: -80rem;
+
+      // z-index: 1;
 
       .pallex {
         position: absolute;
@@ -87,23 +98,43 @@ body {
         right: 0;
         bottom: 0;
         left: 0;
-        @include bgimg;
-        background-size: contain;
 
+        //moon
         &__layer1 {
-          width: 80rem;
           transform: translateZ(0);
-          background-image: url(/img/bg_moon.svg);
+          width: 104rem;
+          left: 40%;
         }
+
+        //town
         &__layer2 {
-          width: 160rem;
-          transform: translateZ(-1px);
-          background-image: url(/img/bg_town.svg);
+          transform: translateZ(-0.5px);
+          width: 180rem;
+          top: 10%;
+          left: 80%;
         }
+
+        &__layer5 {
+          transform: translateZ(-1px);
+          width: 180rem;
+          top: 10%;
+          left: -60%;
+        }
+
+        //ground
         &__layer3 {
-          width: 300rem;
           transform: translateZ(-2px);
-          background-image: url(/img/bg_ground.svg);
+          width: 600rem;
+          top: 100%;
+          left: -110%;
+        }
+
+        //flower
+        &__layer4 {
+          transform: translateZ(-3px);
+          width: 600rem;
+          top: 60%;
+          left: -120%;
         }
       }
     }
@@ -133,7 +164,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  background-color: midnightblue;
 
   &__skills {
     .skills__uiux,
@@ -142,7 +172,6 @@ body {
       width: 49.2rem;
       height: 15rem;
       display: flex;
-      background-color: aliceblue;
     }
     .skills {
       &__box {
@@ -204,7 +233,26 @@ body {
   &__visual {
     width: 54rem;
     height: 73.6rem;
-    background-color: aqua;
+    position: relative;
+
+    .deco--ring {
+      position: absolute;
+      top: 40%;
+      left: -26%;
+      z-index: -1;
+    }
+    .deco--green {
+      position: absolute;
+      top: 10%;
+      left: -20%;
+      opacity: 50%;
+      z-index: -1;
+    }
+    .deco--pink {
+      position: absolute;
+      top: 84%;
+      left: 94%;
+    }
   }
 }
 
@@ -214,6 +262,7 @@ body {
 
   &__visual {
     @include work--visual;
+    background-image: url(/img/pro_market.jpg);
   }
 
   &__txt {
@@ -224,11 +273,11 @@ body {
 //학식 앱 리뉴얼..일러로 바꿀까 고민되긴 함
 .haksik {
   @include work;
-  background-color: teal;
 
   &__visual {
     @include work--visual;
-    border-radius: 240px 0px 0px 240px;
+    border-radius: 300px 0px 0px 300px;
+    background-image: url(/img/pro_sunmock.jpg);
   }
 
   &__txt {
@@ -250,10 +299,15 @@ body {
 }
 
 //기타 작업물
+
 .artworks {
   width: 100vw;
   height: 100vh;
-  background-color: mediumpurple;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  position: relative;
 
   &__box {
     width: 32rem;
@@ -261,11 +315,14 @@ body {
     background-color: aqua;
     @include bgimg;
     border-radius: 40px;
+    margin-left: 20px;
   }
 
   &__top {
     width: 200rem;
     height: 32rem;
+    position: relative;
+    left: 14%;
 
     ul {
       display: flex;
@@ -308,6 +365,14 @@ body {
     &--andrew {
       background-image: url(/img/pro_andrew.jpg);
     }
+  }
+  .bg_line {
+    width: 100vw;
+    height: 96rem;
+    position: absolute;
+    top: -24%;
+    left: 0;
+    z-index: -1;
   }
 }
 

@@ -16,6 +16,7 @@ $color--black: #000;
 $color--pink: #ff24bd;
 $color--blue: #243aff;
 $color--orange: #f68623;
+$color-green: rgb(223, 255, 128);
 
 @mixin tag {
   border: 2px solid $color--pink;
@@ -30,24 +31,22 @@ $color--orange: #f68623;
   align-items: center;
   justify-content: space-between;
   height: 80rem;
-  background-color: tan;
 }
 
 @mixin work--visual {
-  width: 80rem;
-  height: 53.6rem;
-  background-color: aqua;
-  border-radius: 0px 240px 240px 0px;
+  width: 90rem;
+  height: 60rem;
+  background-color: $color--gray2;
+  border-radius: 0px 300px 300px 0px;
 }
 
 @mixin work--txt {
   width: 96rem;
   height: 40rem;
-  background-color: aliceblue;
+  background-color: lightblue;
 }
 
 @mixin bgimg {
-  // background-color: $color--gray1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

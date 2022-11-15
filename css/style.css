@@ -17,7 +17,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 3.2rem;
 }
 
 p {
@@ -36,10 +36,11 @@ li {
 
 a {
   text-decoration: none;
-  display: block;
+  color: #000;
 }
 a:hover {
   cursor: pointer;
+  color: #ff24bd;
 }
 
 .pop {
@@ -56,14 +57,16 @@ a:hover {
 }
 .pop a {
   text-decoration: none;
-  color: #6b6b6b;
+  color: #d9d9d9;
 }
 .pop:target {
   opacity: 1;
   visibility: visible;
 }
 .pop__content {
+  width: 120rem;
   height: 90vh;
+  margin: 5vh auto;
   background-color: #fff;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px;
@@ -74,13 +77,13 @@ a:hover {
 }
 .pop__close {
   border-radius: 50%;
-  color: #6b6b6b;
+  color: #d9d9d9;
   z-index: 1000;
   font-size: 5rem;
   font-weight: 300;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   padding-right: 1.2rem;
   margin-top: -1rem;
 }
@@ -89,7 +92,7 @@ a:hover {
 }
 
 :root {
-  --circles: rgb(241, 255, 198);
+  --circles: rgb(255, 221, 177);
 }
 
 body {
@@ -124,6 +127,12 @@ body {
 
 .wrapper {
   width: 100vw;
+  position: relative;
+}
+.wrapper .deco_line {
+  position: absolute;
+  bottom: 18%;
+  z-index: -1;
 }
 .wrapper .main {
   position: relative;
@@ -134,7 +143,7 @@ body {
   justify-content: center;
 }
 .wrapper .main .scene {
-  background: linear-gradient(217deg, #ffd3f3, #ffa1bd 76.71%), linear-gradient(336deg, #243aff, rgb(255, 166, 236) 70.71%);
+  background: linear-gradient(217deg, rgb(175, 247, 255), rgb(223, 255, 128) 70.71%), linear-gradient(127deg, #ff24bd, rgba(227, 128, 255, 0.958) 70.71%), linear-gradient(336deg, #243aff, rgb(255, 166, 236) 70.71%);
   height: 98vh;
   filter: blur(20px);
   z-index: -1;
@@ -145,13 +154,11 @@ body {
   width: 100%;
 }
 .wrapper .main__pallex {
-  height: 100vh;
+  height: 98vh;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1px;
-  position: relative;
-  display: flex;
-  z-index: 1;
+  margin-top: -80rem;
 }
 .wrapper .main__pallex .pallex {
   position: absolute;
@@ -159,25 +166,35 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: contain;
 }
 .wrapper .main__pallex .pallex__layer1 {
-  width: 80rem;
   transform: translateZ(0);
-  background-image: url(/img/bg_moon.svg);
+  width: 104rem;
+  left: 40%;
 }
 .wrapper .main__pallex .pallex__layer2 {
-  width: 160rem;
+  transform: translateZ(-0.5px);
+  width: 180rem;
+  top: 10%;
+  left: 80%;
+}
+.wrapper .main__pallex .pallex__layer5 {
   transform: translateZ(-1px);
-  background-image: url(/img/bg_town.svg);
+  width: 180rem;
+  top: 10%;
+  left: -60%;
 }
 .wrapper .main__pallex .pallex__layer3 {
-  width: 300rem;
   transform: translateZ(-2px);
-  background-image: url(/img/bg_ground.svg);
+  width: 600rem;
+  top: 100%;
+  left: -110%;
+}
+.wrapper .main__pallex .pallex__layer4 {
+  transform: translateZ(-3px);
+  width: 600rem;
+  top: 60%;
+  left: -120%;
 }
 .wrapper .main__txt {
   position: absolute;
@@ -202,7 +219,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  background-color: midnightblue;
 }
 .profile__skills .skills__uiux,
 .profile__skills .skills__des,
@@ -210,7 +226,6 @@ body {
   width: 49.2rem;
   height: 15rem;
   display: flex;
-  background-color: aliceblue;
 }
 .profile__skills .skills__box {
   width: 7.2rem;
@@ -262,7 +277,25 @@ body {
 .profile__visual {
   width: 54rem;
   height: 73.6rem;
-  background-color: aqua;
+  position: relative;
+}
+.profile__visual .deco--ring {
+  position: absolute;
+  top: 40%;
+  left: -26%;
+  z-index: -1;
+}
+.profile__visual .deco--green {
+  position: absolute;
+  top: 10%;
+  left: -20%;
+  opacity: 50%;
+  z-index: -1;
+}
+.profile__visual .deco--pink {
+  position: absolute;
+  top: 84%;
+  left: 94%;
 }
 
 .market {
@@ -270,18 +303,18 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 80rem;
-  background-color: tan;
 }
 .market__visual {
-  width: 80rem;
-  height: 53.6rem;
-  background-color: aqua;
-  border-radius: 0px 240px 240px 0px;
+  width: 90rem;
+  height: 60rem;
+  background-color: #adadad;
+  border-radius: 0px 300px 300px 0px;
+  background-image: url(/img/pro_market.jpg);
 }
 .market__txt {
   width: 96rem;
   height: 40rem;
-  background-color: aliceblue;
+  background-color: lightblue;
 }
 
 .haksik {
@@ -289,20 +322,19 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 80rem;
-  background-color: tan;
-  background-color: teal;
 }
 .haksik__visual {
-  width: 80rem;
-  height: 53.6rem;
-  background-color: aqua;
-  border-radius: 0px 240px 240px 0px;
-  border-radius: 240px 0px 0px 240px;
+  width: 90rem;
+  height: 60rem;
+  background-color: #adadad;
+  border-radius: 0px 300px 300px 0px;
+  border-radius: 300px 0px 0px 300px;
+  background-image: url(/img/pro_sunmock.jpg);
 }
 .haksik__txt {
   width: 96rem;
   height: 40rem;
-  background-color: aliceblue;
+  background-color: lightblue;
 }
 
 .motion {
@@ -310,24 +342,26 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 80rem;
-  background-color: tan;
 }
 .motion__visual {
-  width: 80rem;
-  height: 53.6rem;
-  background-color: aqua;
-  border-radius: 0px 240px 240px 0px;
+  width: 90rem;
+  height: 60rem;
+  background-color: #adadad;
+  border-radius: 0px 300px 300px 0px;
 }
 .motion__txt {
   width: 96rem;
   height: 40rem;
-  background-color: aliceblue;
+  background-color: lightblue;
 }
 
 .artworks {
   width: 100vw;
   height: 100vh;
-  background-color: mediumpurple;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
 }
 .artworks__box {
   width: 32rem;
@@ -337,10 +371,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 40px;
+  margin-left: 20px;
 }
 .artworks__top {
   width: 200rem;
   height: 32rem;
+  position: relative;
+  left: 14%;
 }
 .artworks__top ul {
   display: flex;
@@ -378,6 +415,14 @@ body {
 }
 .artworks__bottom--andrew {
   background-image: url(/img/pro_andrew.jpg);
+}
+.artworks .bg_line {
+  width: 100vw;
+  height: 96rem;
+  position: absolute;
+  top: -24%;
+  left: 0;
+  z-index: -1;
 }
 
 .footer {
