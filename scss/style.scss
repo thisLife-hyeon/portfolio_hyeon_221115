@@ -48,6 +48,7 @@ body {
     position: absolute;
     bottom: 18%;
     z-index: -1;
+    width: 206rem;
   }
 
   .main {
@@ -177,10 +178,10 @@ body {
       &__box {
         width: 7.2rem;
         height: 7.2rem;
-        border-radius: 16px;
+        border-radius: 1.6rem;
         background-color: aqua;
         margin-right: 4px;
-        background-image: url(/img/ic_ai.svg);
+        @include bgimg;
       }
 
       .skills__uiux {
@@ -235,6 +236,11 @@ body {
     height: 73.6rem;
     position: relative;
 
+    img {
+      width: 54rem;
+      height: 73.6rem;
+    }
+
     .deco--ring {
       position: absolute;
       top: 40%;
@@ -247,11 +253,15 @@ body {
       left: -20%;
       opacity: 50%;
       z-index: -1;
+      width: 22rem;
+      height: 22rem;
     }
     .deco--pink {
       position: absolute;
       top: 84%;
       left: 94%;
+      width: 9.8rem;
+      height: 9.8rem;
     }
   }
 }
@@ -262,6 +272,7 @@ body {
 
   &__visual {
     @include work--visual;
+    @include bgimg;
     background-image: url(/img/pro_market.jpg);
   }
 
@@ -276,6 +287,8 @@ body {
 
   &__visual {
     @include work--visual;
+    @include bgimg;
+
     border-radius: 300px 0px 0px 300px;
     background-image: url(/img/pro_sunmock.jpg);
   }
@@ -291,6 +304,7 @@ body {
 
   &__visual {
     @include work--visual;
+    @include bgimg;
   }
 
   &__txt {

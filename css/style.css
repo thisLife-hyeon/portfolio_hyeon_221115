@@ -43,6 +43,26 @@ a:hover {
   color: #ff24bd;
 }
 
+@media (max-width: 1240px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 5px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 4px;
+  }
+}
 .pop {
   width: 100vw;
   height: 100vh;
@@ -133,6 +153,7 @@ body {
   position: absolute;
   bottom: 18%;
   z-index: -1;
+  width: 206rem;
 }
 .wrapper .main {
   position: relative;
@@ -230,10 +251,12 @@ body {
 .profile__skills .skills__box {
   width: 7.2rem;
   height: 7.2rem;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   background-color: aqua;
   margin-right: 4px;
-  background-image: url(/img/ic_ai.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .profile__skills .skills .skills__uiux--fig {
   background-image: url(/img/ic_figma.svg);
@@ -279,6 +302,10 @@ body {
   height: 73.6rem;
   position: relative;
 }
+.profile__visual img {
+  width: 54rem;
+  height: 73.6rem;
+}
 .profile__visual .deco--ring {
   position: absolute;
   top: 40%;
@@ -291,11 +318,15 @@ body {
   left: -20%;
   opacity: 50%;
   z-index: -1;
+  width: 22rem;
+  height: 22rem;
 }
 .profile__visual .deco--pink {
   position: absolute;
   top: 84%;
   left: 94%;
+  width: 9.8rem;
+  height: 9.8rem;
 }
 
 .market {
@@ -309,6 +340,9 @@ body {
   height: 60rem;
   background-color: #adadad;
   border-radius: 0px 300px 300px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url(/img/pro_market.jpg);
 }
 .market__txt {
@@ -328,6 +362,9 @@ body {
   height: 60rem;
   background-color: #adadad;
   border-radius: 0px 300px 300px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 300px 0px 0px 300px;
   background-image: url(/img/pro_sunmock.jpg);
 }
@@ -348,6 +385,9 @@ body {
   height: 60rem;
   background-color: #adadad;
   border-radius: 0px 300px 300px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .motion__txt {
   width: 96rem;

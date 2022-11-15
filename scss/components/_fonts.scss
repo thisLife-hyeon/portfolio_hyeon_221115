@@ -38,3 +38,26 @@ a {
     color: $color--pink;
   }
 }
+
+@media (max-width: 1240px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 5px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 4px;
+  }
+}
