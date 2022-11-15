@@ -1,0 +1,295 @@
+@import "components/abstracts";
+@import "components/fonts";
+@import "pages/popup";
+
+:root {
+  --circles: rgb(241, 255, 198);
+  // --background: #ffdaf1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: background 1s ease;
+  // background: #3498db;
+}
+
+.gnb {
+  width: 100vw;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba($color: $color--white, $alpha: 0.4);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 10px;
+  // filter: blur(4px);
+  z-index: 1;
+  position: fixed;
+
+  &__logo {
+    width: 16rem;
+    height: 3rem;
+    background-color: aqua;
+  }
+  &__list {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.wrapper {
+  width: 100vw;
+
+  .main {
+    position: relative;
+
+    .flex {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .scene {
+      // background: var(--background);
+      // background: linear-gradient(217deg, rgb(175, 255, 234), rgb(223, 255, 128) 70.71%),
+      //   linear-gradient(127deg, $color--pink, rgba(227, 128, 255, 0.958) 70.71%),
+      //   linear-gradient(336deg, $color--blue, rgb(255, 166, 236) 70.71%);
+
+      background: linear-gradient(217deg, #ffd3f3, #ffa1bd 76.71%),
+        linear-gradient(336deg, $color--blue, rgb(255, 166, 236) 70.71%);
+
+      height: 98xvh;
+      filter: blur(20px);
+      z-index: -1;
+      position: relative;
+
+      &__animation {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__txt {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 24%;
+
+      text-align: center;
+    }
+  }
+}
+
+.tag {
+  display: flex;
+
+  &__list {
+    margin-right: 8px;
+    @include tag;
+    color: $color--pink;
+  }
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: midnightblue;
+
+  &__skills {
+    .skills__uiux,
+    .skills__des,
+    .skills__dev {
+      width: 49.2rem;
+      height: 15rem;
+      display: flex;
+      background-color: aliceblue;
+    }
+    .skills {
+      &__box {
+        width: 7.2rem;
+        height: 7.2rem;
+        border-radius: 16px;
+        background-color: aqua;
+        margin-right: 4px;
+        background-image: url(/img/ic_ai.svg);
+      }
+
+      .skills__uiux {
+        &--fig {
+          background-image: url(/img/ic_figma.svg);
+        }
+        &--xd {
+          background-image: url(/img/ic_xd.svg);
+        }
+      }
+      .skills__des {
+        &--ps {
+          background-image: url(/img/ic_ps.svg);
+        }
+        &--ai {
+          background-image: url(/img/ic_ai.svg);
+        }
+        &--id {
+          background-image: url(/img/ic_id.svg);
+        }
+        &--pr {
+          background-image: url(/img/ic_pr.svg);
+        }
+        &--ru {
+          background-image: url(/img/ic_ru.svg);
+        }
+      }
+      .skills__dev {
+        &--html {
+          background-image: url(/img/ic_html.svg);
+        }
+        &--css {
+          background-image: url(/img/ic_css.svg);
+        }
+        &--js {
+          background-image: url(/img/ic_js.svg);
+        }
+        &--gh {
+          background-image: url(/img/ic_github.svg);
+        }
+        &--slack {
+          background-image: url(/img/ic_slack.svg);
+        }
+        &--scss {
+          background-image: url(/img/ic_sass.svg);
+        }
+      }
+    }
+  }
+  &__visual {
+    width: 54rem;
+    height: 73.6rem;
+    background-color: aqua;
+  }
+}
+
+//멍냥마켓
+.market {
+  @include work;
+
+  &__visual {
+    @include work--visual;
+  }
+
+  &__txt {
+    @include work--txt;
+  }
+}
+
+//학식 앱 리뉴얼..일러로 바꿀까 고민되긴 함
+.haksik {
+  @include work;
+  background-color: teal;
+
+  &__visual {
+    @include work--visual;
+    border-radius: 240px 0px 0px 240px;
+  }
+
+  &__txt {
+    @include work--txt;
+  }
+}
+
+//모션그래픽 광고영상
+.motion {
+  @include work;
+
+  &__visual {
+    @include work--visual;
+  }
+
+  &__txt {
+    @include work--txt;
+  }
+}
+
+//기타 작업물
+.artworks {
+  width: 100vw;
+  height: 100vh;
+  background-color: mediumpurple;
+
+  &__box {
+    width: 32rem;
+    height: 32rem;
+    background-color: aqua;
+    @include bgimg;
+  }
+
+  &__top {
+    width: 200rem;
+    height: 32rem;
+
+    &--luka {
+      background-image: url(/img/pro_luka.jpg);
+    }
+    &--jeju {
+      background-image: url(/img/pro_jeju.jpg);
+    }
+    &--tiger {
+      background-image: url(/img/pro_tiger.jpg);
+    }
+    &--sun {
+      background-image: url(/img/pro_sun.jpg);
+    }
+    &--summer {
+      background-image: url(/img/pro_summer.jpg);
+    }
+  }
+
+  &__bottom {
+    width: 200rem;
+    height: 32rem;
+
+    &--event {
+      background-image: url(/img/pro_event.jpg);
+    }
+    &--castellevent {
+      background-image: url(/img/pro_castellevent.jpg);
+    }
+    &--castellins {
+      background-image: url(/img/pro_castellins.jpg);
+    }
+    &--andrew {
+      background-image: url(/img/pro_andrew.jpg);
+    }
+  }
+}
+
+//footer
+
+.footer {
+  width: 100vw;
+  height: 60rem;
+  background: url(/img/foo_gra.svg);
+  color: $color--white;
+}
+
+// @keyframes text-scrolling {
+//   0% {
+//     transform: translate3d(-80%, 0, 0);
+//   }
+//   100% {
+//     transform: translate3d(10%, 0, 0);
+//   }
+// }
+
+// .txtroll_r {
+//   position: absolute;
+//   animation: text-scrolling 30s linear infinite;
+//   will-change: transform;
+//   display: block;
+//   position: relative;
+//   white-space: nowrap;
+//   margin-top: 70rem;
+// }

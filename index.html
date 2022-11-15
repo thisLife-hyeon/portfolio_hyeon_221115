@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>명현</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="gnb">
+      <div class="gnb__logo">logo</div>
+      <ul class="gnb__list">
+        <li>PROFILE</li>
+        <li>PROJECT</li>
+        <li>GRAPHICS</li>
+        <li>CONTACT</li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="main">
+        <div class="scene flex">
+          <svg
+            class="scene__animation"
+            id="animation"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="12"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+            <g filter="url(#goo)"></g>
+          </svg>
+        </div>
+        <div class="main__txt">
+          <h1>Visual Communication</h1>
+          <h1>Designer</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            rerum nemo, <br />
+            illum maxime harum est ullam possimus nisi excepturi, <br />
+            ad alias natus sint aspernatur debitis, minima impedit dolorem rem
+            laboriosam.
+          </p>
+          <br /><br />
+          <p>scroll</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__skills">
+          <h4>UI/UX</h4>
+          <ul class="skills skills__uiux">
+            <li class="skills__box skills__uiux--fig"></li>
+            <li class="skills__box skills__uiux--xd"></li>
+          </ul>
+          <h4>Design</h4>
+          <ul class="skills skills__des">
+            <li class="skills__box skills__des--ps"></li>
+            <li class="skills__box skills__des--ai"></li>
+            <li class="skills__box skills__des--id"></li>
+            <li class="skills__box skills__des--pr"></li>
+            <li class="skills__box skills__des--ru"></li>
+          </ul>
+          <h4>Developer</h4>
+          <ul class="skills skills__dev">
+            <li class="skills__box skills__dev--html"></li>
+            <li class="skills__box skills__dev--css"></li>
+            <li class="skills__box skills__dev--js"></li>
+            <li class="skills__box skills__dev--gh"></li>
+            <li class="skills__box skills__dev--slack"></li>
+            <li class="skills__box skills__dev--scss"></li>
+          </ul>
+        </div>
+        <div class="profile__visual">
+          <div class="visual__box"></div>
+        </div>
+      </div>
+      <section class="market">
+        <div class="market__visual"></div>
+        <div class="market__txt">
+          <h2>멍냥마켓 <span class="gray">UI/UX</span></h2>
+          <p>
+            멍냥마켓 설명 얄리얄리 얄라셩 얄라리 얄라 <br />
+            멍냥마켓 설명 얄리얄리 얄라셩 얄라리 얄라
+          </p>
+          <ul class="tag">
+            <li class="tag__list">figma</li>
+            <li class="tag__list">Photoshop</li>
+            <li class="tag__list">github</li>
+          </ul>
+        </div>
+      </section>
+      <section class="haksik">
+        <div class="haksik__txt">
+          <h2>학식 앱 리디자인<span class="gray">UI/UX</span></h2>
+          <p>
+            사용자 설문을 통해 기존 '학식'앱의 문제점을 도출하여 <br />
+            화면 구성 및 워크플로우, 기능 추가 등을 수정하였다.
+          </p>
+          <ul class="tag">
+            <li class="tag__list">Adobe XD</li>
+            <li class="tag__list">Photoshop</li>
+          </ul>
+        </div>
+        <div class="haksik__visual"></div>
+      </section>
+      <section class="motion">
+        <div class="motion__visual"></div>
+        <div class="motion__txt">
+          <h2>앱 광고영상 <span class="gray">Motion Graphic</span></h2>
+          <p>
+            멍냥마켓 설명 얄리얄리 얄라셩 얄라리 얄라 <br />
+            멍냥마켓 설명 얄리얄리 얄라셩 얄라리 얄라
+          </p>
+          <ul class="tag">
+            <li class="tag__list">Premier pro</li>
+            <li class="tag__list">Premier rush</li>
+            <li class="tag__list">illustrator</li>
+          </ul>
+        </div>
+      </section>
+      <div class="artworks">
+        <div class="artworks__top">
+          <ul>
+            <li class="artworks__box artworks__top--luka"><a href="#popup1"></a></li>
+            <li class="artworks__box artworks__top--jeju"><a href="#popup2"></a></li>
+            <li class="artworks__box artworks__top--tiger"><a href="#popup3"></a></li>
+            <li class="artworks__box artworks__top--sun"><a href="#popup4"></a></li>
+            <li class="artworks__box artworks__top--summer"><a href="#popup5"></a></li>
+          </ul>
+        </div>
+        <div class="artworks__bottom">
+          <ul>
+            <li class="artworks__box artworks__bottom--event"><a href="#popup6"></a></li>
+            <li class="artworks__box artworks__bottom--castellevent"><a href="#popup7"></a></li>
+            <li class="artworks__box artworks__bottom--castellins"><a href="#popup8"></a></li>
+            <li class="artworks__box artworks__bottom--andrew"><a href="#popup9"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <footer class="footer">
+      <ul class="footer__contact">
+        <h3>Contact</h3>
+        <li>Email : and2288@naver.com</li>
+        <li>KakaoTalk : thislife123</li>
+      </ul>
+      <ul class="footer__info">
+        <li>
+          <ul>
+            <li class="sns--1"></li>
+            <li class="sns--2"></li>
+            <li class="sns--3"></li>
+          </ul>
+        </li>
+        <li>
+          COPYRIGHT 2022. 양명현. ALL RIGHTS RESERVED. 본 사이트는 개인
+          포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다. 사용된 일부
+          이미지 및 폰트는 별도의 출처가 있음을 밝힙니다.
+        </li>
+      </ul>
+    </footer> -->
+
+
+    <!-- pop -->
+    
+    <div class="pop popup1" id="popup1">
+      <div class="pop__content">
+        <a href="#project5" class="pop__close">&times;</a>
+        <!-- <section class="pdf">
+          <iframe src="img/motion-all.pdf" style="width:110rem; height:80rem;" frameborder="0"></iframe>\
+        </section> -->
+    </div>
+
+
+  </body>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="src/script.js"></script>
+</html>

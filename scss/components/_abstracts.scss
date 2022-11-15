@@ -1,0 +1,54 @@
+//color
+
+//gray
+$color--white: #fff;
+
+$color--lightgray1: #fafafa;
+$color--lightgray2: #f0f0f0;
+
+$color--gray1: #d9d9d9;
+$color--gray2: #adadad;
+
+$color--darkgray: #6b6b6b;
+$color--black: #000;
+
+//primary
+$color--pink: #ff24bd;
+$color--blue: #243aff;
+$color--orange: #f68623;
+
+@mixin tag {
+  border: 2px solid $color--pink;
+  border-radius: 100px;
+  padding: 6px 20px 8px 20px;
+}
+
+//작업물
+
+@mixin work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rem;
+  background-color: tan;
+}
+
+@mixin work--visual {
+  width: 80rem;
+  height: 53.6rem;
+  background-color: aqua;
+  border-radius: 0px 240px 240px 0px;
+}
+
+@mixin work--txt {
+  width: 96rem;
+  height: 40rem;
+  background-color: aliceblue;
+}
+
+@mixin bgimg {
+  background-color: $color--gray1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
