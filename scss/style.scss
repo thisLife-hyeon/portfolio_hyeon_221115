@@ -61,7 +61,7 @@ body {
       background: linear-gradient(217deg, #ffd3f3, #ffa1bd 76.71%),
         linear-gradient(336deg, $color--blue, rgb(255, 166, 236) 70.71%);
 
-      height: 98xvh;
+      height: 98vh;
       filter: blur(20px);
       z-index: -1;
       position: relative;
@@ -69,6 +69,42 @@ body {
       &__animation {
         height: 100%;
         width: 100%;
+      }
+    }
+
+    &__pallex {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+      position: relative;
+      display: flex;
+      z-index: 1;
+
+      .pallex {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include bgimg;
+        background-size: contain;
+
+        &__layer1 {
+          width: 80rem;
+          transform: translateZ(0);
+          background-image: url(/img/bg_moon.svg);
+        }
+        &__layer2 {
+          width: 160rem;
+          transform: translateZ(-1px);
+          background-image: url(/img/bg_town.svg);
+        }
+        &__layer3 {
+          width: 300rem;
+          transform: translateZ(-2px);
+          background-image: url(/img/bg_ground.svg);
+        }
       }
     }
 
@@ -224,11 +260,16 @@ body {
     height: 32rem;
     background-color: aqua;
     @include bgimg;
+    border-radius: 40px;
   }
 
   &__top {
     width: 200rem;
     height: 32rem;
+
+    ul {
+      display: flex;
+    }
 
     &--luka {
       background-image: url(/img/pro_luka.jpg);
@@ -250,6 +291,10 @@ body {
   &__bottom {
     width: 200rem;
     height: 32rem;
+
+    ul {
+      display: flex;
+    }
 
     &--event {
       background-image: url(/img/pro_event.jpg);
