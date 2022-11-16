@@ -20,7 +20,7 @@ body {
   width: 100vw;
   height: 7rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: rgba($color: $color--white, $alpha: 0.4);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 10px;
@@ -29,14 +29,20 @@ body {
   position: fixed;
 
   &__logo {
-    width: 16rem;
-    height: 3rem;
-    background-color: aqua;
+    width: 30%;
+    a {
+      font-size: 2.6rem;
+      color: $color--pink;
+    }
   }
   &__list {
     width: 40%;
     display: flex;
     justify-content: space-around;
+
+    li {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -153,6 +159,7 @@ body {
 
 .tag {
   display: flex;
+  padding: 0;
 
   &__list {
     margin-right: 8px;
@@ -164,23 +171,36 @@ body {
 .profile {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
+  height: 80rem;
 
   &__skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // align-items: center;
+    margin-left: 12rem;
+    height: 90em;
+    // background-color: thistle;
+
+    h4 {
+      margin-bottom: 0rem;
+    }
+
     .skills__uiux,
     .skills__des,
     .skills__dev {
-      width: 49.2rem;
-      height: 15rem;
       display: flex;
+      padding: 0;
     }
     .skills {
       &__box {
-        width: 7.2rem;
-        height: 7.2rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 1.6rem;
         background-color: aqua;
-        margin-right: 4px;
+        margin-right: 0.8rem;
         @include bgimg;
       }
 
@@ -235,6 +255,7 @@ body {
     width: 54rem;
     height: 73.6rem;
     position: relative;
+    margin-right: 12rem;
 
     img {
       width: 54rem;
@@ -272,8 +293,23 @@ body {
 
   &__visual {
     @include work--visual;
-    @include bgimg;
-    background-image: url(/img/pro_market.jpg);
+    overflow: hidden;
+
+    // background-image: url(/img/pro_market.jpg);
+
+    .zoomin {
+      width: 100%;
+      height: 100%;
+      @include bgimg;
+      background-color: black; /* fallback color */
+      background-image: url(/img/pro_market.jpg);
+      transition: all 0.5s;
+    }
+
+    &:hover .zoomin,
+    &:focus .zoomin {
+      transform: scale(1.2);
+    }
   }
 
   &__txt {

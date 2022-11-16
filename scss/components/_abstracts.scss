@@ -36,14 +36,20 @@ $color-green: rgb(223, 255, 128);
 @mixin work--visual {
   width: 90rem;
   height: 60rem;
-  background-color: $color--gray2;
+  // background-color: $color--gray2;
   border-radius: 0px 300px 300px 0px;
+  // transition: 1s;
+
+  // &:hover {
+  //   // transform: scale(1.2);
+  //   background-size: 120%;
+  // }
 }
 
 @mixin work--txt {
-  width: 96rem;
+  width: 80rem;
   height: 40rem;
-  background-color: lightblue;
+  // background-color: lightblue;
 }
 
 @mixin bgimg {

@@ -167,11 +167,12 @@ body.style.backgroundColor = "white";
 // trigger this function every time the user scrolls
 window.onscroll = function (event) {
   var scroll = window.pageYOffset;
-  if (scroll >= 3400 && scroll < 9900) {
-    body.style.backgroundColor = "#FFF8E0";
-    // } else if (scroll >= 1800 && scroll < 3000) {
-    // 	// red
-    // 	body.style.backgroundColor = 'red';
+  if (scroll >= 0 && scroll < 1700) {
+    body.style.backgroundColor = "#FFDDB1";
+  } else if (scroll >= 4000 && scroll < 9900) {
+    body.style.backgroundColor = "#FCE6FD";
+
+    // body.style.backgroundColor = "#FFF8E0";
   } else {
     // purple
     body.style.backgroundColor = "white";
