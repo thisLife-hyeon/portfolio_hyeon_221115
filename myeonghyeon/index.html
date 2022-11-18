@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>명현</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="gnb" >
+      <h4 class="gnb__logo"><a href="#home">Myeong-hyeon</a></h4>
+      <ul class="gnb__list">
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#project">PROJECTS</a></li>
+        <li><a href="#graphics">GRAPHICS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="main" id="home">
+        <div class="scene flex">
+          <svg
+            class="scene__animation"
+            id="animation"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="12"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+            <g filter="url(#goo)"></g>
+          </svg>
+        </div>
+        <div class="main__pallex">
+          <div class="pallex pallex__layer1"><img src="img/bg_moon.svg" alt=""></div>
+          <div class="pallex pallex__layer2"><img src="img/bg_town.svg" alt=""></div>
+          <div class="pallex pallex__layer5"><img src="img/bg_town.svg" alt=""></div>
+          <div class="pallex pallex__layer3"><img src="img/bg_ground.svg" alt=""></div>
+          <div class="pallex pallex__layer4"><img src="img/bg_flower.svg" alt=""></div>
+
+        </div>
+        <div class="main__txt">
+          <h1>Visual <span> Communication</span></h1>
+          <h1>Designer</h1>
+          <p>
+            현대 사회에서 디자인의 중요도는 더욱 더 높아지고 있다. <br />
+            이러한 '디자인'에서 가장 중요하다고 생각하는 것은 '소통'이다. <br />
+            소통을 중요시하는 디자이너, 양명현 입니다.
+          </p>
+          <br /><br />
+          <p>scroll</p>
+        </div>
+      </div>
+      <div class="profile" id="profile">
+        <div class="profile__skills">
+          <h1>SKILLS</h1>
+          <h4>UI/UX</h4>
+          <ul class="skills skills__uiux">
+            <li class="skills__box skills__uiux--fig"></li>
+            <li class="skills__box skills__uiux--xd"></li>
+          </ul>
+          <h4>Design</h4>
+          <ul class="skills skills__des">
+            <li class="skills__box skills__des--ps"></li>
+            <li class="skills__box skills__des--ai"></li>
+            <li class="skills__box skills__des--id"></li>
+            <li class="skills__box skills__des--pr"></li>
+            <li class="skills__box skills__des--ru"></li>
+          </ul>
+          <h4>Developer</h4>
+          <ul class="skills skills__dev">
+            <li class="skills__box skills__dev--html"></li>
+            <li class="skills__box skills__dev--css"></li>
+            <li class="skills__box skills__dev--js"></li>
+            <li class="skills__box skills__dev--gh"></li>
+            <li class="skills__box skills__dev--slack"></li>
+            <li class="skills__box skills__dev--scss"></li>
+          </ul>
+        </div>
+        <div class="profile__visual">
+            <img src="img/profile_img.png" alt="">
+            <img src="img/deco_ring.svg" alt="" class="deco--ring">
+            <img src="img/deco_green.svg" alt="" class="deco--green">
+            <img src="img/deco_pink.svg" alt="" class="deco--pink">
+        </div>
+      </div>
+      <section class="market" id="project">
+        <div class="market__visual">
+          <a href="#popup_uiux"><div class="zoomin"></div></a>
+        </div>
+        <div class="market__txt">
+          <h2>멍냥마켓 <span class="gray">UI/UX</span></h2>
+          <p>
+            강아지, 고양이 용품 중고거래 플랫폼으로, 반응형 디자인 작업을 하였다.<br />
+            귀엽고 심플한 컨셉을 잡아 디자인 하였다.
+          </p>
+          <ul class="tag">
+            <li class="tag__list">figma</li>
+            <li class="tag__list">Photoshop</li>
+            <li class="tag__list">github</li>
+          </ul>
+          <a href="#popup_uiux">자세히 보기 ></a>
+        </div>
+      </section>
+      <section class="illust" >
+        <div class="illust__txt">
+          <h2>해와 달이 된 오누이<span class="gray">illust</span></h2>
+          <p>
+            전래동화인 '해와 달이 된 오누이'의 이야기를 일월오봉도에 담아냈다.<br />
+            발 밑에는 붉은 수수밭을 그려 호랑이가 밧줄에서 떨어진 이후를 표현하였고,<br />
+            오누이의 어머니의 죽음을 애도하기 위해 오누이의 손에 흰국화를 쥐어주었다.
+          </p>
+          <ul class="tag">
+            <li class="tag__list">Adobe XD</li>
+            <li class="tag__list">Photoshop</li>
+          </ul>
+          <a href="#popup_illust">자세히 보기 ></a>
+        </div>
+        <div class="illust__visual">
+          <a href="#popup_illust"><div class="zoomin"></div></a>
+        </div>
+      </section>
+      <section class="motion">
+        <div class="motion__visual">
+          <a href="#popup_motion"><div class="zoomin"></div></a>
+        </div>
+        <div class="motion__txt">
+          <h2>앱 광고영상 <span class="gray">Motion Graphic</span></h2>
+          <p>
+            반려동물 케어 서비스 앱 홍보 영상을 제작했다.<br />
+            영상 초반, 외롭고 일상적인 분위기를 긍정적인 장면으로 전환하여<br />
+            은유적으로 앱의 장점을 알리고자 하였다.
+          </p>
+          <ul class="tag">
+            <li class="tag__list">Premier pro</li>
+            <li class="tag__list">Premier rush</li>
+            <li class="tag__list">illustrator</li>
+          </ul>
+          <a href="#popup_motion">자세히 보기 ></a>
+
+        </div>
+      </section>
+      <div class="artworks" id="graphics">
+        <div class="artworks__top">
+          <ul>
+            <a href="#popup1"><li class="artworks__box artworks__top--luka"></li></a>
+            <a href="#popup2"><li class="artworks__box artworks__top--jeju"></li></a>
+            <a href="#popup3"><li class="artworks__box artworks__top--tiger"></li></a>
+            <a href="#popup4"><li class="artworks__box artworks__top--sun"></li></a>
+            <a href="#popup5"><li class="artworks__box artworks__top--summer"></li></a>
+          </ul>
+        </div>
+        <div class="artworks__bottom">
+          <ul>
+            <a href="#popup6"><li class="artworks__box artworks__bottom--event"></li></a>
+            <a href="#popup7"><li class="artworks__box artworks__bottom--castellevent"></li></a>
+            <a href="#popup8"><li class="artworks__box artworks__bottom--castellins"></li></a>
+            <a href="#popup9"><li class="artworks__box artworks__bottom--andrew"></li></a>
+          </ul>
+        </div>
+        <div class="bg_line"><img src="img/line.svg" alt=""></div>
+      </div>
+      <div class="deco_line"><img src="img/deco_line.svg" alt=""></div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" >
+      <ul class="footer__contact" id="contact">
+        <h3>Contact</h3>
+        <li>Email : and2288@naver.com</li>
+        <li>KakaoTalk : thislife123</li>
+      </ul>
+      <ul class="footer__info">
+        <li>
+          <ul>
+            <li class="sns--1"></li>
+            <li class="sns--2"></li>
+            <li class="sns--3"></li>
+          </ul>
+        </li>
+
+        <li>COPYRIGHT 2022. 양명현. ALL RIGHTS RESERVED.</li>
+        <li>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.</li>
+        <li>사용된 일부이미지 및 폰트는 별도의 출처가 있음을 밝힙니다.</li>
+      </ul>
+    </footer>
+
+
+    <!-- pop -->
+
+    <div class="pop popup_uiux" id="popup_uiux">
+      <div class="pop__content">
+        <a href="#project" class="pop__close">&times;</a>
+        <!-- <section class="pdf">
+          <iframe src="img/motion-all.pdf" style="width:110rem; height:80rem;" frameborder="0"></iframe>\
+        </section> -->
+        <section class="modal">
+        <img src="img/pop_uiux.jpg" alt="img">
+        </section>
+    </div>
+
+    <div class="pop popup_illust" id="popup_illust">
+      <div class="pop__content">
+        <a href="#project" class="pop__close">&times;</a>
+        <!-- <section class="pdf">
+          <iframe src="img/motion-all.pdf" style="width:110rem; height:80rem;" frameborder="0"></iframe>\
+        </section> -->
+        <section class="modal">
+        <img src="img/pop_luka.png" alt="img">
+        </section>
+    </div>
+
+    <div class="pop popup_motion" id="popup_motion">
+      <div class="pop__content">
+        <a href="#project" class="pop__close">&times;</a>
+    </div>
+
+    
+    <div class="pop popup1" id="popup1">
+      <div class="popup1__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+        <img src="img/pop_luka.png" alt="img">
+        <section class="modal">
+          <img src="img/pop_luka.png" alt="img">
+          </section>
+    </div>
+    <div class="pop popup2" id="popup2">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup3" id="popup3">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup4" id="popup4">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup5" id="popup5">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup6" id="popup6">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup7" id="popup7">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup8" id="popup8">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+    <div class="pop popup9" id="popup9">
+      <div class="pop__content">
+        <a href="#graphics" class="pop__close">&times;</a>
+    </div>
+
+
+  </body>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="src/script.js"></script>
+</html>

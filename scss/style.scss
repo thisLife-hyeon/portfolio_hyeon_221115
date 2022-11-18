@@ -12,8 +12,9 @@ body {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
-  transition: background 1s ease;
-  // background: #3498db;
+  // transition: background 1s ease;
+  width: 100vw;
+  scroll-behavior: smooth;
 }
 
 .gnb {
@@ -153,18 +154,18 @@ body {
       top: 24%;
 
       text-align: center;
+      // color: $color--darkgray;
+
+      h1 span {
+        font-size: inherit;
+        color: $color--blue;
+      }
+
+      p {
+        line-height: 1.8;
+        font-size: 1.8rem;
+      }
     }
-  }
-}
-
-.tag {
-  display: flex;
-  padding: 0;
-
-  &__list {
-    margin-right: 8px;
-    @include tag;
-    color: $color--pink;
   }
 }
 
@@ -174,6 +175,7 @@ body {
   align-items: center;
   width: 100%;
   height: 80rem;
+  color: $color--blue;
 
   &__skills {
     display: flex;
@@ -186,6 +188,7 @@ body {
 
     h4 {
       margin-bottom: 0rem;
+      color: $color--darkgray;
     }
 
     .skills__uiux,
@@ -199,54 +202,54 @@ body {
         width: 7rem;
         height: 7rem;
         border-radius: 1.6rem;
-        background-color: aqua;
+        background-color: $color--gray2;
         margin-right: 0.8rem;
         @include bgimg;
       }
 
       .skills__uiux {
         &--fig {
-          background-image: url(/img/ic_figma.svg);
+          background-image: url(../img/ic_figma.svg);
         }
         &--xd {
-          background-image: url(/img/ic_xd.svg);
+          background-image: url(../img/ic_xd.svg);
         }
       }
       .skills__des {
         &--ps {
-          background-image: url(/img/ic_ps.svg);
+          background-image: url(../img/ic_ps.svg);
         }
         &--ai {
-          background-image: url(/img/ic_ai.svg);
+          background-image: url(../img/ic_ai.svg);
         }
         &--id {
-          background-image: url(/img/ic_id.svg);
+          background-image: url(../img/ic_id.svg);
         }
         &--pr {
-          background-image: url(/img/ic_pr.svg);
+          background-image: url(../img/ic_pr.svg);
         }
         &--ru {
-          background-image: url(/img/ic_ru.svg);
+          background-image: url(../img/ic_ru.svg);
         }
       }
       .skills__dev {
         &--html {
-          background-image: url(/img/ic_html.svg);
+          background-image: url(../img/ic_html.svg);
         }
         &--css {
-          background-image: url(/img/ic_css.svg);
+          background-image: url(../img/ic_css.svg);
         }
         &--js {
-          background-image: url(/img/ic_js.svg);
+          background-image: url(../img/ic_js.svg);
         }
         &--gh {
-          background-image: url(/img/ic_github.svg);
+          background-image: url(../img/ic_github.svg);
         }
         &--slack {
-          background-image: url(/img/ic_slack.svg);
+          background-image: url(../img/ic_slack.svg);
         }
         &--scss {
-          background-image: url(/img/ic_sass.svg);
+          background-image: url(../img/ic_sass.svg);
         }
       }
     }
@@ -263,9 +266,10 @@ body {
     }
 
     .deco--ring {
+      width: 80rem;
       position: absolute;
-      top: 40%;
-      left: -26%;
+      top: 20%;
+      left: -20%;
       z-index: -1;
     }
     .deco--green {
@@ -287,6 +291,17 @@ body {
   }
 }
 
+.tag {
+  display: flex;
+  padding: 0;
+
+  &__list {
+    margin-right: 8px;
+    @include tag;
+    color: $color--pink;
+  }
+}
+
 //멍냥마켓
 .market {
   @include work;
@@ -298,12 +313,8 @@ body {
     // background-image: url(/img/pro_market.jpg);
 
     .zoomin {
-      width: 100%;
-      height: 100%;
-      @include bgimg;
-      background-color: black; /* fallback color */
-      background-image: url(/img/pro_market.jpg);
-      transition: all 0.5s;
+      @include zoom;
+      background-image: url(../img/pro_market.jpg);
     }
 
     &:hover .zoomin,
@@ -318,19 +329,29 @@ body {
 }
 
 //학식 앱 리뉴얼..일러로 바꿀까 고민되긴 함
-.haksik {
+.illust {
   @include work;
 
   &__visual {
     @include work--visual;
-    @include bgimg;
+    overflow: hidden;
 
     border-radius: 300px 0px 0px 300px;
-    background-image: url(/img/pro_sunmock.jpg);
+
+    .zoomin {
+      @include zoom;
+      background-image: url(../img/pro_sunmock.jpg);
+    }
+
+    &:hover .zoomin,
+    &:focus .zoomin {
+      transform: scale(1.2);
+    }
   }
 
   &__txt {
     @include work--txt;
+    margin-left: 30rem;
   }
 }
 
@@ -340,7 +361,17 @@ body {
 
   &__visual {
     @include work--visual;
-    @include bgimg;
+    overflow: hidden;
+
+    .zoomin {
+      @include zoom;
+      background-image: url(../img/pro-motion.jpg);
+    }
+
+    &:hover .zoomin,
+    &:focus .zoomin {
+      transform: scale(1.2);
+    }
   }
 
   &__txt {
@@ -352,17 +383,17 @@ body {
 
 .artworks {
   width: 100vw;
-  height: 100vh;
+  height: 96vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   position: relative;
 
   &__box {
     width: 32rem;
     height: 32rem;
-    background-color: aqua;
+    background-color: $color--gray2;
     @include bgimg;
     border-radius: 40px;
     margin-left: 20px;
@@ -374,24 +405,29 @@ body {
     position: relative;
     left: 14%;
 
+    animation: rolling-right 100s linear infinite;
+    will-change: transform;
+    // position: relative;
+    white-space: nowrap;
+
     ul {
       display: flex;
     }
 
     &--luka {
-      background-image: url(/img/pro_luka.jpg);
+      background-image: url(../img/pro_luka.jpg);
     }
     &--jeju {
-      background-image: url(/img/pro_jeju.jpg);
+      background-image: url(../img/pro_jeju.jpg);
     }
     &--tiger {
-      background-image: url(/img/pro_tiger.jpg);
+      background-image: url(../img/pro_tiger.jpg);
     }
     &--sun {
-      background-image: url(/img/pro_sun.jpg);
+      background-image: url(../img/pro_sun.jpg);
     }
     &--summer {
-      background-image: url(/img/pro_summer.jpg);
+      background-image: url(../img/pro_summer.jpg);
     }
   }
 
@@ -399,21 +435,26 @@ body {
     width: 200rem;
     height: 32rem;
 
+    animation: rolling-left 100s linear infinite;
+    will-change: transform;
+    // position: relative;
+    white-space: nowrap;
+
     ul {
       display: flex;
     }
 
     &--event {
-      background-image: url(/img/pro_event.jpg);
+      background-image: url(../img/pro_event.jpg);
     }
     &--castellevent {
-      background-image: url(/img/pro_castellevent.jpg);
+      background-image: url(../img/pro_castellevent.jpg);
     }
     &--castellins {
-      background-image: url(/img/pro_castellins.jpg);
+      background-image: url(../img/pro_castellins.jpg);
     }
     &--andrew {
-      background-image: url(/img/pro_andrew.jpg);
+      background-image: url(../img/pro_andrew.jpg);
     }
   }
   .bg_line {
@@ -430,26 +471,52 @@ body {
 
 .footer {
   width: 100vw;
-  height: 60rem;
-  background: url(/img/foo_gra.svg);
+  height: 54rem;
+  background: url(../img/bg_gra3.svg);
   color: $color--white;
+  display: flex;
+  // justify-content: space-around;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    @include bgimg;
+    background-size: contain;
+    background-image: url(../img/contactme.svg);
+    margin-top: -32rem;
+
+    // position: absolute;
+    animation: text-scrolling 14s linear infinite;
+    will-change: transform;
+    // position: relative;
+    white-space: nowrap;
+  }
+
+  &__contact {
+    position: absolute;
+    top: 30%;
+    left: 12%;
+
+    li {
+      font-size: 2.2rem;
+      line-height: 1.8;
+    }
+
+    h3 {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 54%;
+    right: 12%;
+    text-align: right;
+
+    li {
+      font-size: 1.8rem;
+      line-height: 1.8;
+    }
+  }
 }
-
-// @keyframes text-scrolling {
-//   0% {
-//     transform: translate3d(-80%, 0, 0);
-//   }
-//   100% {
-//     transform: translate3d(10%, 0, 0);
-//   }
-// }
-
-// .txtroll_r {
-//   position: absolute;
-//   animation: text-scrolling 30s linear infinite;
-//   will-change: transform;
-//   display: block;
-//   position: relative;
-//   white-space: nowrap;
-//   margin-top: 70rem;
-// }
