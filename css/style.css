@@ -416,6 +416,7 @@ body {
   background-color: #adadad;
   transition: all 0.5s;
   background-image: url(../img/pro_market.jpg);
+
 }
 .market__visual:hover .zoomin, .market__visual:focus .zoomin {
   transform: scale(1.2);
@@ -463,6 +464,7 @@ body {
 .illust__visual:hover .zoomin, .illust__visual:focus .zoomin {
   transform: scale(1.2);
 }
+
 .illust__txt {
   width: 80rem;
   height: 40rem;
@@ -501,7 +503,9 @@ body {
   background-size: cover;
   background-color: #adadad;
   transition: all 0.5s;
+
   background-image: url(../img/pro-motion.jpg);
+
 }
 .motion__visual:hover .zoomin, .motion__visual:focus .zoomin {
   transform: scale(1.2);
@@ -603,22 +607,27 @@ body {
   width: 100vw;
   height: 54rem;
   background: url(../img/bg_gra3.svg);
+
   color: #fff;
   display: flex;
   position: relative;
 }
+
 .footer::before {
+
   content: "";
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   background-size: contain;
   background-image: url(../img/contactme.svg);
   margin-top: -32rem;
   animation: text-scrolling 14s linear infinite;
   will-change: transform;
   white-space: nowrap;
+
 }
 .footer__contact {
   position: absolute;

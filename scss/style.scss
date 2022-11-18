@@ -13,8 +13,10 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   // transition: background 1s ease;
+
   width: 100vw;
   scroll-behavior: smooth;
+
 }
 
 .gnb {
@@ -315,7 +317,7 @@ body {
     .zoomin {
       @include zoom;
       background-image: url(../img/pro_market.jpg);
-    }
+
 
     &:hover .zoomin,
     &:focus .zoomin {
@@ -341,6 +343,7 @@ body {
     .zoomin {
       @include zoom;
       background-image: url(../img/pro_sunmock.jpg);
+
     }
 
     &:hover .zoomin,
@@ -366,6 +369,7 @@ body {
     .zoomin {
       @include zoom;
       background-image: url(../img/pro-motion.jpg);
+
     }
 
     &:hover .zoomin,
@@ -472,7 +476,9 @@ body {
 .footer {
   width: 100vw;
   height: 54rem;
+
   background: url(../img/bg_gra3.svg);
+
   color: $color--white;
   display: flex;
   // justify-content: space-around;
@@ -491,6 +497,7 @@ body {
     will-change: transform;
     // position: relative;
     white-space: nowrap;
+
   }
 
   &__contact {
@@ -502,6 +509,8 @@ body {
       font-size: 2.2rem;
       line-height: 1.8;
     }
+
+
 
     h3 {
       font-size: 4.8rem;
