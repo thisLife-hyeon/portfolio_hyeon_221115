@@ -1,0 +1,81 @@
+//color
+
+//gray
+$color--white: #fff;
+
+$color--lightgray1: #fafafa;
+$color--lightgray2: #f0f0f0;
+
+$color--gray1: #d9d9d9;
+$color--gray2: #adadad;
+
+$color--darkgray: #6b6b6b;
+$color--black: #000;
+
+//primary
+$color--pink: #ff24bd;
+$color--blue: #243aff;
+$color--orange: #f68623;
+$color-green: rgb(223, 255, 128);
+
+@mixin tag {
+  border: 1px solid $color--pink;
+  border-radius: 100px;
+  padding: 6px 20px 8px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+//작업물
+
+@mixin work {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84rem;
+}
+
+@mixin work--visual {
+  width: 90rem;
+  height: 60rem;
+  border-radius: 0px 300px 300px 0px;
+  // transition: 1s;
+
+  // &:hover {
+  //   // transform: scale(1.2);
+  //   background-size: 120%;
+  // }
+}
+
+@mixin work--txt {
+  width: 80rem;
+  height: 40rem;
+  position: relative;
+
+  p {
+    line-height: 1.8;
+    margin-top: -2rem;
+  }
+
+  a {
+    font-size: 1.4rem;
+    position: absolute;
+    left: 0%;
+    color: $color--darkgray;
+    margin-top: 6rem;
+  }
+}
+
+@mixin bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin zoom {
+  width: 100%;
+  height: 100%;
+  @include bgimg;
+  background-color: $color--gray2;
+  transition: all 0.5s;
+}

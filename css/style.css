@@ -1,3 +1,27 @@
+@keyframes text-scrolling {
+  0% {
+    transform: translate3d(-60%, 0, 0);
+  }
+  100% {
+    transform: translate3d(20%, 0, 0);
+  }
+}
+@keyframes rolling-left {
+  0% {
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    transform: translate3d(80%, 0, 0);
+  }
+}
+@keyframes rolling-right {
+  0% {
+    transform: translate3d(10%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-80%, 0, 0);
+  }
+}
 html,
 body {
   font-size: 62.5%;
@@ -130,6 +154,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
+  width: 100vw;
+  scroll-behavior: smooth;
 }
 
 .gnb {
@@ -283,43 +309,43 @@ body {
   background-size: cover;
 }
 .profile__skills .skills .skills__uiux--fig {
-  background-image: url(/img/ic_figma.svg);
+  background-image: url(../img/ic_figma.svg);
 }
 .profile__skills .skills .skills__uiux--xd {
-  background-image: url(/img/ic_xd.svg);
+  background-image: url(../img/ic_xd.svg);
 }
 .profile__skills .skills .skills__des--ps {
-  background-image: url(/img/ic_ps.svg);
+  background-image: url(../img/ic_ps.svg);
 }
 .profile__skills .skills .skills__des--ai {
-  background-image: url(/img/ic_ai.svg);
+  background-image: url(../img/ic_ai.svg);
 }
 .profile__skills .skills .skills__des--id {
-  background-image: url(/img/ic_id.svg);
+  background-image: url(../img/ic_id.svg);
 }
 .profile__skills .skills .skills__des--pr {
-  background-image: url(/img/ic_pr.svg);
+  background-image: url(../img/ic_pr.svg);
 }
 .profile__skills .skills .skills__des--ru {
-  background-image: url(/img/ic_ru.svg);
+  background-image: url(../img/ic_ru.svg);
 }
 .profile__skills .skills .skills__dev--html {
-  background-image: url(/img/ic_html.svg);
+  background-image: url(../img/ic_html.svg);
 }
 .profile__skills .skills .skills__dev--css {
-  background-image: url(/img/ic_css.svg);
+  background-image: url(../img/ic_css.svg);
 }
 .profile__skills .skills .skills__dev--js {
-  background-image: url(/img/ic_js.svg);
+  background-image: url(../img/ic_js.svg);
 }
 .profile__skills .skills .skills__dev--gh {
-  background-image: url(/img/ic_github.svg);
+  background-image: url(../img/ic_github.svg);
 }
 .profile__skills .skills .skills__dev--slack {
-  background-image: url(/img/ic_slack.svg);
+  background-image: url(../img/ic_slack.svg);
 }
 .profile__skills .skills .skills__dev--scss {
-  background-image: url(/img/ic_sass.svg);
+  background-image: url(../img/ic_sass.svg);
 }
 .profile__visual {
   width: 54rem;
@@ -389,7 +415,8 @@ body {
   background-size: cover;
   background-color: #adadad;
   transition: all 0.5s;
-  background-image: url(/img/pro_market.jpg);
+  background-image: url(../img/pro_market.jpg);
+
 }
 .market__visual:hover .zoomin, .market__visual:focus .zoomin {
   transform: scale(1.2);
@@ -432,11 +459,12 @@ body {
   background-size: cover;
   background-color: #adadad;
   transition: all 0.5s;
-  background-image: url(/img/pro_sunmock.jpg);
+  background-image: url(../img/pro_sunmock.jpg);
 }
 .illust__visual:hover .zoomin, .illust__visual:focus .zoomin {
   transform: scale(1.2);
 }
+
 .illust__txt {
   width: 80rem;
   height: 40rem;
@@ -475,7 +503,9 @@ body {
   background-size: cover;
   background-color: #adadad;
   transition: all 0.5s;
-  background-image: url(/img/pro-motion.jpg);
+
+  background-image: url(../img/pro-motion.jpg);
+
 }
 .motion__visual:hover .zoomin, .motion__visual:focus .zoomin {
   transform: scale(1.2);
@@ -520,43 +550,49 @@ body {
   height: 32rem;
   position: relative;
   left: 14%;
+  animation: rolling-right 100s linear infinite;
+  will-change: transform;
+  white-space: nowrap;
 }
 .artworks__top ul {
   display: flex;
 }
 .artworks__top--luka {
-  background-image: url(/img/pro_luka.jpg);
+  background-image: url(../img/pro_luka.jpg);
 }
 .artworks__top--jeju {
-  background-image: url(/img/pro_jeju.jpg);
+  background-image: url(../img/pro_jeju.jpg);
 }
 .artworks__top--tiger {
-  background-image: url(/img/pro_tiger.jpg);
+  background-image: url(../img/pro_tiger.jpg);
 }
 .artworks__top--sun {
-  background-image: url(/img/pro_sun.jpg);
+  background-image: url(../img/pro_sun.jpg);
 }
 .artworks__top--summer {
-  background-image: url(/img/pro_summer.jpg);
+  background-image: url(../img/pro_summer.jpg);
 }
 .artworks__bottom {
   width: 200rem;
   height: 32rem;
+  animation: rolling-left 100s linear infinite;
+  will-change: transform;
+  white-space: nowrap;
 }
 .artworks__bottom ul {
   display: flex;
 }
 .artworks__bottom--event {
-  background-image: url(/img/pro_event.jpg);
+  background-image: url(../img/pro_event.jpg);
 }
 .artworks__bottom--castellevent {
-  background-image: url(/img/pro_castellevent.jpg);
+  background-image: url(../img/pro_castellevent.jpg);
 }
 .artworks__bottom--castellins {
-  background-image: url(/img/pro_castellins.jpg);
+  background-image: url(../img/pro_castellins.jpg);
 }
 .artworks__bottom--andrew {
-  background-image: url(/img/pro_andrew.jpg);
+  background-image: url(../img/pro_andrew.jpg);
 }
 .artworks .bg_line {
   width: 100vw;
@@ -570,20 +606,28 @@ body {
 .footer {
   width: 100vw;
   height: 54rem;
-  background: url(/img/bg_gra3.svg);
+  background: url(../img/bg_gra3.svg);
+
   color: #fff;
   display: flex;
   position: relative;
 }
-.footer::after {
+
+.footer::before {
+
   content: "";
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: auto;
-  background-image: url(/img/contactme.svg);
+
+  background-size: contain;
+  background-image: url(../img/contactme.svg);
   margin-top: -32rem;
+  animation: text-scrolling 14s linear infinite;
+  will-change: transform;
+  white-space: nowrap;
+
 }
 .footer__contact {
   position: absolute;

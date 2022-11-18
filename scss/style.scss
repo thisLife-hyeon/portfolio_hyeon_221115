@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   // transition: background 1s ease;
+
+  width: 100vw;
+  scroll-behavior: smooth;
+
 }
 
 .gnb {
@@ -207,47 +211,47 @@ body {
 
       .skills__uiux {
         &--fig {
-          background-image: url(/img/ic_figma.svg);
+          background-image: url(../img/ic_figma.svg);
         }
         &--xd {
-          background-image: url(/img/ic_xd.svg);
+          background-image: url(../img/ic_xd.svg);
         }
       }
       .skills__des {
         &--ps {
-          background-image: url(/img/ic_ps.svg);
+          background-image: url(../img/ic_ps.svg);
         }
         &--ai {
-          background-image: url(/img/ic_ai.svg);
+          background-image: url(../img/ic_ai.svg);
         }
         &--id {
-          background-image: url(/img/ic_id.svg);
+          background-image: url(../img/ic_id.svg);
         }
         &--pr {
-          background-image: url(/img/ic_pr.svg);
+          background-image: url(../img/ic_pr.svg);
         }
         &--ru {
-          background-image: url(/img/ic_ru.svg);
+          background-image: url(../img/ic_ru.svg);
         }
       }
       .skills__dev {
         &--html {
-          background-image: url(/img/ic_html.svg);
+          background-image: url(../img/ic_html.svg);
         }
         &--css {
-          background-image: url(/img/ic_css.svg);
+          background-image: url(../img/ic_css.svg);
         }
         &--js {
-          background-image: url(/img/ic_js.svg);
+          background-image: url(../img/ic_js.svg);
         }
         &--gh {
-          background-image: url(/img/ic_github.svg);
+          background-image: url(../img/ic_github.svg);
         }
         &--slack {
-          background-image: url(/img/ic_slack.svg);
+          background-image: url(../img/ic_slack.svg);
         }
         &--scss {
-          background-image: url(/img/ic_sass.svg);
+          background-image: url(../img/ic_sass.svg);
         }
       }
     }
@@ -312,8 +316,8 @@ body {
 
     .zoomin {
       @include zoom;
-      background-image: url(/img/pro_market.jpg);
-    }
+      background-image: url(../img/pro_market.jpg);
+
 
     &:hover .zoomin,
     &:focus .zoomin {
@@ -338,7 +342,8 @@ body {
 
     .zoomin {
       @include zoom;
-      background-image: url(/img/pro_sunmock.jpg);
+      background-image: url(../img/pro_sunmock.jpg);
+
     }
 
     &:hover .zoomin,
@@ -363,7 +368,8 @@ body {
 
     .zoomin {
       @include zoom;
-      background-image: url(/img/pro-motion.jpg);
+      background-image: url(../img/pro-motion.jpg);
+
     }
 
     &:hover .zoomin,
@@ -403,24 +409,29 @@ body {
     position: relative;
     left: 14%;
 
+    animation: rolling-right 100s linear infinite;
+    will-change: transform;
+    // position: relative;
+    white-space: nowrap;
+
     ul {
       display: flex;
     }
 
     &--luka {
-      background-image: url(/img/pro_luka.jpg);
+      background-image: url(../img/pro_luka.jpg);
     }
     &--jeju {
-      background-image: url(/img/pro_jeju.jpg);
+      background-image: url(../img/pro_jeju.jpg);
     }
     &--tiger {
-      background-image: url(/img/pro_tiger.jpg);
+      background-image: url(../img/pro_tiger.jpg);
     }
     &--sun {
-      background-image: url(/img/pro_sun.jpg);
+      background-image: url(../img/pro_sun.jpg);
     }
     &--summer {
-      background-image: url(/img/pro_summer.jpg);
+      background-image: url(../img/pro_summer.jpg);
     }
   }
 
@@ -428,21 +439,26 @@ body {
     width: 200rem;
     height: 32rem;
 
+    animation: rolling-left 100s linear infinite;
+    will-change: transform;
+    // position: relative;
+    white-space: nowrap;
+
     ul {
       display: flex;
     }
 
     &--event {
-      background-image: url(/img/pro_event.jpg);
+      background-image: url(../img/pro_event.jpg);
     }
     &--castellevent {
-      background-image: url(/img/pro_castellevent.jpg);
+      background-image: url(../img/pro_castellevent.jpg);
     }
     &--castellins {
-      background-image: url(/img/pro_castellins.jpg);
+      background-image: url(../img/pro_castellins.jpg);
     }
     &--andrew {
-      background-image: url(/img/pro_andrew.jpg);
+      background-image: url(../img/pro_andrew.jpg);
     }
   }
   .bg_line {
@@ -460,19 +476,28 @@ body {
 .footer {
   width: 100vw;
   height: 54rem;
-  background: url(/img/bg_gra3.svg);
+
+  background: url(../img/bg_gra3.svg);
+
   color: $color--white;
   display: flex;
   // justify-content: space-around;
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     width: 100%;
     @include bgimg;
-    background-size: auto;
-    background-image: url(/img/contactme.svg);
+    background-size: contain;
+    background-image: url(../img/contactme.svg);
     margin-top: -32rem;
+
+    // position: absolute;
+    animation: text-scrolling 14s linear infinite;
+    will-change: transform;
+    // position: relative;
+    white-space: nowrap;
+
   }
 
   &__contact {
@@ -484,6 +509,8 @@ body {
       font-size: 2.2rem;
       line-height: 1.8;
     }
+
+
 
     h3 {
       font-size: 4.8rem;
@@ -502,22 +529,3 @@ body {
     }
   }
 }
-
-// @keyframes text-scrolling {
-//   0% {
-//     transform: translate3d(-80%, 0, 0);
-//   }
-//   100% {
-//     transform: translate3d(10%, 0, 0);
-//   }
-// }
-
-// .txtroll_r {
-//   position: absolute;
-//   animation: text-scrolling 30s linear infinite;
-//   will-change: transform;
-//   display: block;
-//   position: relative;
-//   white-space: nowrap;
-//   margin-top: 70rem;
-// }

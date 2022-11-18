@@ -1,3 +1,4 @@
+
 //color
 
 //gray
@@ -78,4 +79,31 @@ $color-green: rgb(223, 255, 128);
   @include bgimg;
   background-color: $color--gray2;
   transition: all 0.5s;
+}
+
+@keyframes text-scrolling {
+  0% {
+    transform: translate3d(-60%, 0, 0);
+  }
+  100% {
+    transform: translate3d(20%, 0, 0);
+  }
+}
+
+@keyframes rolling-left {
+  0% {
+    transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    transform: translate3d(80%, 0, 0);
+  }
+}
+
+@keyframes rolling-right {
+  0% {
+    transform: translate3d(10%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-80%, 0, 0);
+  }
 }
